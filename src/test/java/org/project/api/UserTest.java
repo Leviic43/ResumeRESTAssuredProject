@@ -30,7 +30,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class UserTest {
 
     private static final UsersController USERS_CONTROLLER = new UsersController(); //инстанцируем контроллер
-    private static final SoftAssertions softly = new SoftAssertions(); //soft assert для мягких проверок //todo вынести в общий класс родитель?
+    private static final SoftAssertions softly = new SoftAssertions(); //soft assert для мягких проверок
 
     private static final String NAME = "anton";
     private static final String JOB = "tester";
@@ -73,7 +73,7 @@ public class UserTest {
 
         softly.assertThat(responseMap.get("page")).isEqualTo(2);
 
-        @SuppressWarnings("unchecked") //подавить ворнинг (чтоб не отсвечивал)
+        @SuppressWarnings("unchecked") //подавить ворнинг
         List<Map<String, Object>> dataMap = (List<Map<String, Object>>) responseMap.get("data"); //Представить массив data как Лист мап
 
         boolean isHasId = dataMap.stream()

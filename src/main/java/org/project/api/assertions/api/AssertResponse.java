@@ -4,9 +4,9 @@ import io.restassured.response.Response;
 import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.api.SoftAssertions;
 
-public class AssertResponse extends AbstractAssert<AssertResponse, Response> { //todo добавить перегрузку под разные типы
+public class AssertResponse extends AbstractAssert<AssertResponse, Response> {
 
-    //наследуемся от AbstractAssert для написания своих проврок
+    //наследуемся от AbstractAssert для написания своих проверок
 
     public AssertResponse(Response response) {
         super(response, AssertResponse.class);
